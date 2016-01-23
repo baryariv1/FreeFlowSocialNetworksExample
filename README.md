@@ -47,6 +47,7 @@ First create new xml file under “layout” folder, this view contains ImageVie
 ```
 Create  new class - “SocialNetworkLayout”, in that class we define the layout settings.
 SocialNetworkLayout should extend FreeFlowLayoutBase and implement FreeFlowLayout.
+
 Override setDimensions : 
 
 ```java
