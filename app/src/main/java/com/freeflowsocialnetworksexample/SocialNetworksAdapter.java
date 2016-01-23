@@ -38,7 +38,7 @@ public class SocialNetworksAdapter implements SectionedAdapter {
         section.setSectionTitle("Section ");
 
         for (int i = 0; i < socialNetworks.size(); i++) {
-            section.addItem(new Object());
+            section.addItem(socialNetworks.get(i));
         }
     }
 
@@ -56,9 +56,9 @@ public class SocialNetworksAdapter implements SectionedAdapter {
             holder = new SocialNetworksViewHolder(convertView);
             convertView.setTag(holder);
         } else
-            holder = (SocialNetworksViewHolder)convertView.getTag();
+            holder = (SocialNetworksViewHolder) convertView.getTag();
 
-        holder.snImg.setImageResource(socialNetworks.get(position));
+        holder.snImg.setImageResource((int) this.section.getData().get(position));
         return convertView;
     }
 
