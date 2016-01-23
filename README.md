@@ -19,6 +19,7 @@ You can download the library from https://github.com/Comcast/FreeFlow
   include ':app', ':libraries:FreeFlow'
 ```
   * Add in “app” build.gradle :
+  
     ```java
   dependencies {
     compile project(':libraries:FreeFlow')
