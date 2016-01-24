@@ -299,16 +299,16 @@ In your View\Fragment\Activity add:
 
 ```java
   FreeFlowContainer socialNetworksView = new FreeFlowContainer(this);
-        SocialNetworksLayout socialNetworksLayout = new SocialNetworksLayout();
-        SocialNetworksAdapter socialNetworksAdapter = new SocialNetworksAdapter(this, snList);
-        socialNetworksView.setLayout(socialNetworksLayout);
-        socialNetworksView.setAdapter(socialNetworksAdapter);
-        socialNetworksView.dataInvalidated(false);
-        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(
+  SocialNetworksLayout socialNetworksLayout = new SocialNetworksLayout();
+  SocialNetworksAdapter socialNetworksAdapter = new SocialNetworksAdapter(this, snList);
+  socialNetworksView.setLayout(socialNetworksLayout);
+  socialNetworksView.setAdapter(socialNetworksAdapter);
+  socialNetworksView.dataInvalidated(false);
+  ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT);
-        socialNetworksView.setLayoutParams(params);
-        rootView.addView(socialNetworksView);
+  socialNetworksView.setLayoutParams(params);
+  rootView.addView(socialNetworksView);
 ```
     
   We call dataInvalidate with a false parameter on socialNetworksView because we don’t want to recalculate the scroll positions, you can try to replace it to true and see what happens.	
